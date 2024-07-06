@@ -1,0 +1,12 @@
+numpy
+pillow
+colorama
+opencv-python
+pytest
+pydub
+tqdm
+moviepy
+gradio_client
+loguru
+soundfile
+fastapi

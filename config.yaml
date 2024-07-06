@@ -1,0 +1,11 @@
+---
+txt2img:
+  hostname: localhost
+  port: 7860
+tts:
+  hostname: ns-tts
+  port: 8000
+sbboxpred:
+  hostname: sbboxpred
+  port: 7861
+  
