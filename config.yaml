@@ -1,6 +1,6 @@
 ---
 txt2img:
-  hostname: localhost
+  hostname: host.docker.internal
   port: 7860
 tts:
   hostname: ns-tts

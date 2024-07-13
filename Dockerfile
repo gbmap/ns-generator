@@ -1,7 +1,7 @@
 FROM python:3.12-slim AS system
 
 RUN apt-get update && \
-  apt-get install -y make git
+  apt-get install -y make git vim
 
 RUN useradd -d /home/generator generator
 

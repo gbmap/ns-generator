@@ -134,7 +134,7 @@ def postproc_char(
     hostname: str = "localhost",
     port: int = 7860,
 ) -> List[PIL.Image.Image]:
-    mask = PIL.Image.fromarray(gen_alpha_mask(frames))
+    mask = PIL.Image.fromarray(gen_alpha_mask(frames, hostname, port))
     if scale is not None and scale > 1:
         frames = upscale(frames, scale, hostname, port)
     mask = mask.resize(frames[0].size, resample=PIL.Image.Resampling.BICUBIC)
