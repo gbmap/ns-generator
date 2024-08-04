@@ -6,6 +6,8 @@ tts:
   hostname: ns-tts
   port: 8000
 sbboxpred:
-  hostname: sbboxpred
-  port: 7861
-  
+  hostname: ns-sbboxpred
+  port: 7860
+sfx:
+  hostname: ns-sfx
+  port: 9002

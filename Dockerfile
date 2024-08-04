@@ -24,11 +24,12 @@ ARG GH_TOKEN
 
 RUN git clone https://${GH_USER}:${GH_TOKEN}@github.com/gbmap/ns-parser.git && \
   cd ns-parser && \
+  git checkout 5e1ceff && \
   pip install . && \
   cd -
 
 FROM natural_stupidity AS source
-USER generator
 COPY src/ ./src/
 COPY config.yaml config.yaml
+RUN chown -R generator:generator ../ 
 ENTRYPOINT ["uvicorn", "src.natural_stupidity.gen.server:app", "--host", "0.0.0.0", "--port", "9001"]

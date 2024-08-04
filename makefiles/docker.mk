@@ -14,6 +14,7 @@ docker/network:
 
 docker/build:
 	docker build --build-arg GH_USER=$(GH_USER) --build-arg GH_TOKEN=$(GH_TOKEN) -t $(DOCKER_IMAGE_NAME) .
+	docker image tag $(DOCKER_IMAGE_NAME):latest ghcr.io/gbmap/$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_TAG)
 
 docker/run: docker/cache docker/network
 	docker run -it -d -p 9001:9001 --network ns -v ns-generator-cache:/home/generator/.cache/ --name $(DOCKER_IMAGE_NAME) $(DOCKER_IMAGE_NAME)
